@@ -1,18 +1,20 @@
-- Tao nhánh local
+- Tao nhánh local: này anh zai tạo nhánh local 1 lần thôi nha
 + git checkout -b lam
 + git checkout -b manh
 
-- chạy
+- qua nhánh master và pull code về
 + git checkout master
 + git pull origin master
 
+- chuyển nhánh và code
 + git checkout manh/lam
 + git status
 + git add .
 + git status
 + git commit -m 'noi dung commit'
-git push origin manh/lam
-- Trộn nhánh manh/lam vào master
++git push origin manh/lam
+
+- Trộn nhánh manh/lam vào master trên github
 
 - xem list nhánh
 git branch
