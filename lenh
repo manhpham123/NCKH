@@ -10,4 +10,4 @@ git branch -r
 
 - chạy front_end: cd vào thư mục front-end 
 + tải thư viện: npm i
-+ chạy: http://localhost:3000/login     với username và pass bất kỳ
++ chạy: http://localhost:3000/dashboard  
