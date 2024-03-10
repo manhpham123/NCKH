@@ -2,11 +2,12 @@
 + git checkout -b lam
 + git checkout -b manh
 
+
 - qua nhánh master và pull code về
 + git checkout master
 + git pull origin master
 
-- chuyển nhánh và code
+- chuyển nhánh và code, sau đó đẩy lên nhánh. a zai checkout sang nhánh lâm rồi pull lên nhánh lâm nha
 + git checkout manh/lam
 + git status
 + git add .
