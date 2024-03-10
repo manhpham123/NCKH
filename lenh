@@ -2,8 +2,12 @@ git checkout master
 git pull origin master
 git status
 git add .
+git status
 git commit -m ""
 git push origin master
 git branch
 git branch -r
 
+- chạy front_end: cd vào thư mục front-end 
++ tải thư viện: npm i
++ chạy: http://localhost:3000/login     với username và pass bất kỳ
