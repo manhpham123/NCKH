@@ -24,3 +24,5 @@ git branch -r
 - chạy front_end: cd vào thư mục front-end 
 + tải thư viện: npm i
 + chạy: http://localhost:3000/dashboard  
+
+//test
