@@ -26,3 +26,8 @@ git branch -r
 + chạy: http://localhost:3000/dashboard  
 
 //test
+
+//back_end 
+-cd back_end_flow
+-run: uvicorn app:app --reload
+- http://127.0.0.1:8000/docs
