@@ -4,9 +4,11 @@ import './style.scss'
 import { useDispatch } from "react-redux";
 import { setSelectedBreadCrumb } from "../App/store/appSlice";
 import DashboardGeneralItem from "./component/DashboardGeneralItem";
-import { Space } from "antd";
+import { Space, message } from "antd";
 import Icons from "../../assets/icons";
 import DboardTopCardItem from "./component/DboardTopCardItem";
+import { useItems } from "../../utils/request";
+import { customerApi } from "../../apis/customer";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -19,6 +21,17 @@ const Dashboard = () => {
     ]
     dispatch(setSelectedBreadCrumb(breadCrumb))
   }, [])
+  const {data, mutate} = useItems()
+  // const handlerUpdate = (dataUpdate: any) =>{
+  //   const res = customerApi.updateStatus(data);
+  //   if(res.status === 200) {
+  //     message.success("ooke xong");
+  //     mutate();
+  //   }else message.error()
+  //   message.warning()
+  // }
+  console.log(data);
+  
   return (
     <div className="customers-wrapper">
       <Space direction="horizontal" className="dasboard-gn-wrapper">
