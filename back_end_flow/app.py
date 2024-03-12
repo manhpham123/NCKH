@@ -12,7 +12,6 @@ from model import *
 from typing import List, Dict
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 client = MongoClient("mongodb://localhost:27017/")
@@ -41,19 +40,10 @@ app.add_middleware(
     allow_headers=["*"], # Tiêu đề HTTP cho phép
 )
 
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins, # Danh sách các nguồn gốc có thể truy cập API của bạn
-    allow_credentials=True,
-    allow_methods=["*"], # Phương thức HTTP cho phép
-    allow_headers=["*"], # Tiêu đề HTTP cho phép
-)
+
+
+
 
 
 # Khai báo một list của các nguồn gốc mà bạn muốn cho phép
@@ -73,36 +63,6 @@ app.add_middleware(
 )
 
 
-# Khai báo một list của các nguồn gốc mà bạn muốn cho phép
-
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins, # Danh sách các nguồn gốc có thể truy cập API của bạn
-    allow_credentials=True,
-    allow_methods=["*"], # Phương thức HTTP cho phép
-    allow_headers=["*"], # Tiêu đề HTTP cho phép
-)
-
-# Khai báo một list của các nguồn gốc mà bạn muốn cho phép
-origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins, # Danh sách các nguồn gốc có thể truy cập API của bạn
-    allow_credentials=True,
-    allow_methods=["*"], # Phương thức HTTP cho phép
-    allow_headers=["*"], # Tiêu đề HTTP cho phép
-)
 
 @app.get("/items/", response_model=List[dict])
 async def read_items():
