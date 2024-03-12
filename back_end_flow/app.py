@@ -12,7 +12,7 @@ from model import *
 from typing import List, Dict
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
 client = MongoClient("mongodb://localhost:27017/")
