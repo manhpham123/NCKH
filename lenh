@@ -9,12 +9,11 @@
 
 - chuyển nhánh và code, sau đó đẩy lên nhánh. a zai checkout sang nhánh lâm rồi pull lên nhánh lâm nha
 + git checkout manh/lam
-+ git pull origin master
 + git status
 + git add .
 + git status
 + git commit -m 'noi dung commit'
-+git push origin manh/lam
++ git push origin manh/lam
 
 - Trộn nhánh manh/lam vào master trên github
 
@@ -27,7 +26,3 @@ git branch -r
 + chạy: http://localhost:3000/dashboard  
 
 //test
-
-//back_end 
-cd back_end_flow
-uvicorn app:app --reload
